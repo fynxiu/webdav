@@ -55,7 +55,7 @@ set WD_CERT.`,
 
 		// Builds the address and a listener.
 		laddr := getOpt(flags, "address") + ":" + getOpt(flags, "port")
-		listener, err := net.Listen("tcp", laddr)
+		listener, err := net.Listen("tcp4", laddr)
 		if err != nil {
 			log.Fatal(err)
 		}
